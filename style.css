@@ -1,0 +1,16 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-countainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    height: 50%;
+}

@@ -7,8 +7,8 @@ The player with the card with the higher value, wins the round and the cards are
 - [ ] Create index.html and the first .css and .js files;
 - [ ] Create two card templates without styling;
 - [ ] Create "Play/Card-play" button and "Reset";
-- [ ] Create card comparison values to determine who wins the round/game;
-- [ ] Draft css card and table styling;
 - [ ] Create shuffle method;
+- [ ] Draft css card and table styling;
+- [ ] Create card comparison values to determine who wins the round/game;
 - [ ] Implement same value method;
 - [ ] Declare the winner;
