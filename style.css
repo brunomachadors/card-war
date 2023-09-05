@@ -1,17 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 100%;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
 }
+
 h1 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.bg {
+  /* background: url("https://c1.wallpaperflare.com/preview/595/738/358/background-playing-cards-gambling.jpg")
+    no-repeat; */
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 30px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  filter: blur(30px);
+}
+
+.loading-text {
+  font-size: 80px;
+  color: #000;
+}
+
 .game-countainer {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
