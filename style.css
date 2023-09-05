@@ -1,16 +1,57 @@
-body{
-    height: 100%;
-    width: 100%;
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.game-countainer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: blue;
-    height: 50%;
+
+.game-countainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  border: solid black;
+  margin: 0 150px;
+}
+
+.deck-one-container {
+  border: solid black;
+  height: 90%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck-two-container {
+  border: solid black;
+  height: 90%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-one-container {
+  border: solid black;
+  height: 90%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-two-container {
+  border: solid black;
+  height: 90%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
