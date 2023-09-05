@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Card War Game</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Card War Game</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <h1>Card War Game</h1>
-  <div class="scores">
-    <div class="scores player">Player Score: 0</div>
-    <div class="scores cpu">CPU Score: 0</div>
-  </div>
-  <div class="loading-text">0</div>
-  <div class="board">
-
-    <div class="game-countainer">
-      <div class="deck-one-container">Deck player one</div>
-      <div class="card-one-container">Active card player one</div>
-      <div class="button-next-round"><button>NEXT</button></div>
-      <div class="deck-two-container">Active card player two</div>
-      <div class="card-two-container">Deck player two</div>
+  <body>
+    <h1>Card War Game</h1>
+    <div class="scores">
+      <div class="scores player">Player Score: 0</div>
+      <div class="scores cpu">CPU Score: 0</div>
     </div>
-
-  </div>
-  <div class="footer">&copy Bruno Machado, Guilherme Monteiro, Rui Carvalho and Francisco Carvalhal 2023
-
-  </div>
-  <script src="./cardWar.js" async defer></script>
-</body>
-
+    <div class="loading-text">0</div>
+    <div class="board">
+      <div class="game-countainer">
+        <div class="deck-one-container"><div class="card-line"></div></div>
+        <div class="card-one-container" id="activeCardOne" name="activeCardOne">
+          <div class="number-top">
+            <div class="card-one-number">6</div>
+          </div>
+          <div>
+            <img
+              class="card-suit"
+              src="https://static.vecteezy.com/system/resources/previews/012/227/692/original/playing-card-suit-symbol-heart-png.png"
+              alt="hearts suit"
+            />
+          </div>
+          <div class="number-botton">
+            <div class="card-one-number">6</div>
+          </div>
+        </div>
+        <div class="button-next-round"><button>NEXT</button></div>
+        <div class="card-two-container">
+          <div class="number-top">
+            <div>5</div>
+          </div>
+          <div>
+            <img
+              class="card-suit"
+              src="https://static.vecteezy.com/system/resources/previews/012/227/692/original/playing-card-suit-symbol-heart-png.png"
+              alt="hearts suit"
+            />
+          </div>
+          <div class="number-botton">
+            <div>5</div>
+          </div>
+        </div>
+        <div class="deck-two-container"><div class="card-line"></div></div>
+      </div>
+    </div>
+    <div class="footer">
+      &copy Bruno Machado, Guilherme Monteiro, Rui Carvalho and Francisco
+      Carvalhal 2023
+    </div>
+    <script src="./cardWar.js" async defer></script>
+  </body>
 </html>
