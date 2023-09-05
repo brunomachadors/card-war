@@ -15,8 +15,8 @@ _The winner takes all cards on the table._
 
 - [x] Create index.html and the first .css and .js files;
 - [x] Create an open loading animation;
-- [ ] Create two card templates without styling;
-- [ ] Create "Play/Card-play" button and "Reset";
+- [x] Create two card templates without styling;
+- [x] Create "Play/Card-play" button and "Reset";
 - [ ] Create shuffle method;
 - [ ] Draft css card and table styling;
 - [ ] Create card comparison values to determine who wins the round/game;
