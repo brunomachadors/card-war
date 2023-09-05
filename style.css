@@ -142,7 +142,6 @@ h1 {
   width: 100%;
   font-size: 40px;
   font: bold;
-
   transform: rotate(180deg);
 }
 
@@ -159,17 +158,18 @@ h1 {
   padding: 20px 0;
 }
 
-/* Basic button styling */
 .button-next-round {
+  height: 60px;
+  width: 100px;
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
   background-color: #3f9c11;
   color: #fff;
   border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .button-next-round:hover {
@@ -191,6 +191,7 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .button-reset:hover {
@@ -200,6 +201,187 @@ h1 {
 
 .button-reset:focus {
   outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .deck-one-container {
+    height: 235px;
+    width: 150px;
+  }
+
+  .deck-two-container {
+    height: 235px;
+    width: 150px;
+  }
+
+  .card-one-container {
+    height: 235px;
+    width: 150px;
+  }
+
+  .card-two-container {
+    height: 235px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .deck-one-container {
+    height: 170px;
+    width: 109px;
+  }
+
+  .deck-two-container {
+    height: 170px;
+    width: 109px;
+  }
+
+  .card-one-container {
+    height: 170px;
+    width: 109px;
+  }
+
+  .card-two-container {
+    height: 170px;
+    width: 109px;
+  }
+
+  .number-top {
+    width: 90%;
+  }
+
+  .number-botton {
+    width: 90%;
+  }
+
+  .card-suit {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .deck-one-container {
+    height: 100px;
+    width: 60px;
+  }
+
+  .deck-two-container {
+    height: 100px;
+    width: 60px;
+  }
+
+  .card-one-container {
+    height: 100px;
+    width: 60px;
+  }
+
+  .card-two-container {
+    height: 100px;
+    width: 60px;
+  }
+
+  .first-card-number-top {
+    width: 3px;
+  }
+
+  .second-card-number-top {
+    width: 3px;
+  }
+
+  .number-botton {
+    opacity: 0;
+  }
+
+  .first-card-suit {
+    width: 20px;
+  }
+
+  .second-card-suit {
+    width: 20px;
+  }
+
+  .button-next-round {
+    height: 60px;
+    width: 80px;
+  }
+
+  .game-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .deck-one-container {
+    height: 70px;
+    width: 40px;
+  }
+
+  .deck-two-container {
+    height: 70px;
+    width: 40px;
+  }
+
+  .card-one-container {
+    height: 70px;
+    width: 40px;
+  }
+
+  .card-two-container {
+    height: 70px;
+    width: 40px;
+  }
+
+  .first-card-number-top {
+    width: 3px;
+  }
+
+  .second-card-number-top {
+    width: 3px;
+  }
+
+  .number-botton {
+    opacity: 0;
+  }
+
+  .first-card-suit {
+    width: 10px;
+  }
+
+  .second-card-suit {
+    width: 10px;
+  }
+
+  .button-next-round {
+    height: 30px;
+    width: 50px;
+    font-size: 12px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .button-reset {
+    height: 35px;
+    width: 60px;
+    font-size: 12px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .game-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
 }
 
 .footer {
