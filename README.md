@@ -14,6 +14,7 @@ _The winner takes all cards on the table._
 ## Tasks
 
 - [x] Create index.html and the first .css and .js files;
+- [ ] Create an open loading animation;
 - [ ] Create two card templates without styling;
 - [ ] Create "Play/Card-play" button and "Reset";
 - [ ] Create shuffle method;
