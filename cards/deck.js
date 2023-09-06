@@ -1,4 +1,4 @@
-function createDeck() {
+export function createDeck() {
   const suits = ['clubs', 'diamonds', 'hearts', 'spades'];
 
   let card;
@@ -32,7 +32,3 @@ function checkDisplayedValue(value) {
       return value.toString();
   }
 }
-
-createDeck();
-
-module.exports = { createDeck };

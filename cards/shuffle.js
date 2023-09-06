@@ -1,21 +1,15 @@
-const { createDeck } = require('../cards/deck');
-
-function shuffleDeck(deck) {
+export function shuffleDeck(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [deck[i], deck[j]] = [deck[j], deck[i]]; // Swap elements
+    [deck[i], deck[j]] = [deck[j], deck[i]];
   }
   return deck;
 }
 
-const deck = createDeck();
-
-const shuffledDeck = shuffleDeck(deck);
-
-function splitDeck(shuffledDeck) {
+export function splitDeck(gameDeck) {
   const playerOneDeck = [];
   const playerTwoDeck = [];
-  shuffledDeck.forEach((card, index) => {
+  gameDeck.forEach((card, index) => {
     if (index % 2 === 0) {
       playerOneDeck.push(card);
     } else {
@@ -23,12 +17,7 @@ function splitDeck(shuffledDeck) {
     }
   });
 
-  console.log(playerOneDeck.length);
-  console.log(playerOneDeck);
-  console.log(playerTwoDeck.length);
-  console.log(playerTwoDeck);
+  const decks = { deckOne: playerOneDeck, deckTwo: playerTwoDeck };
 
-  return { deckOne: playerOneDeck, deckTwo: playerTwoDeck };
+  return decks;
 }
-
-splitDeck(shuffledDeck);
