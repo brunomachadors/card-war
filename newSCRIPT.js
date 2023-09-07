@@ -1,10 +1,9 @@
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll('.card');
 
 cards.forEach(addCardElements);
 
-function addCardElements(card) {
+export function addCardElements(card) {
   const value = card.dataset.value;
-  // const suit = card.dataset.suit
 
   const valueAsNumber = parseInt(value);
   if (isNaN(valueAsNumber)) {
@@ -15,20 +14,21 @@ function addCardElements(card) {
     }
   }
 
-  card.append(createCornerNumber("top", value));
-  card.append(createCornerNumber("bottom", value));
+  card.append(createCornerNumber('top', value));
+  card.append(createCornerNumber('bottom', value));
+  return card;
 }
 
 function createCornerNumber(position, value) {
-  const corner = document.createElement("div");
+  const corner = document.createElement('div');
   corner.textContent = value;
-  corner.classList.add("corner-number");
+  corner.classList.add('corner-number');
   corner.classList.add(position);
   return corner;
 }
 
 function createPip() {
-  const pip = document.createElement("div");
-  pip.classList.add("pip");
+  const pip = document.createElement('div');
+  pip.classList.add('pip');
   return pip;
 }
