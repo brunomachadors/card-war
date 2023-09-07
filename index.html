@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Card War Game</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./cardWar.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Card War Game</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  <body>
+    <h1>Card War Game</h1>
+    <div class="scores">
+      <div class="scores player">Player Score: 0</div>
+      <div class="scores cpu">CPU Score: 0</div>
+    </div>
+    <div class="loading-text">0</div>
+    <div class="board">
+      <div class="game-container">
+        <div class="playerOne">
+          <div class="deck-one-container">
+            <div class="card-line"></div>
+          </div>
+          <div
+            class="card-one-container"
+            id="activeCardOne"
+            name="activeCardOne"
+          >
+            <div class="number-top first-card-number-top">
+              <div class="card-number" id="cardNumberOneTop"></div>
+            </div>
+            <div>
+              <img
+                id="activeCardOneSuit"
+                class="card-suit first-card-suit"
+                src="./cards/suits/spades.png"
+              />
+            </div>
+            <div class="number-bottom first-card-number-top">
+              <div class="card-number" id="cardNumberOneBottom"></div>
+            </div>
+          </div>
+        </div>
 
-<body>
-  <h1>Card War Game</h1>
-  <div class="scores">
-    <div class="scores player">Player Score: 0</div>
-    <div class="scores cpu">CPU Score: 0</div>
-  </div>
-  <div class="loading-text">0</div>
-  <div class="board">
-    <div class="game-countainer">
-      <div class="deck-one-container">
-        <div class="card-line"></div>
-      </div>
-      <div class="card-one-container" id="activeCardOne" name="activeCardOne">
-        <div class="number-top first-card-number-top">
-          <div class="card-one-number">6</div>
-        </div>
-        <div>
-          <img class="card-suit first-card-suit" src="./cards/suits/spades.png" alt="hearts suit" />
-        </div>
-        <div class="number-botton">
-          <div class="card-one-number">6</div>
-        </div>
-      </div>
+        <div class="buttons">
+          <div class="spacer">
+            <button
+              class="button-start"
+              id="start"
+              onclick="handleStartGameClick();"
+            >
+              START
+            </button>
+          </div>
+          <div><button class="button-next-round">NEXT</button></div>
 
-      <div class="buttons">
-        <div class="spacer"></div>
-        <div><button class="button-next-round">NEXT</button></div>
+          <div>
+            <button class="button-reset">RESET</button>
+          </div>
+        </div>
 
-        <div>
-          <button class="button-reset">RESET</button>
+        <div class="playerTwo">
+          <div class="card-two-container">
+            <div
+              class="number-top second-card-number-top first-card-number-top"
+            >
+              <div>5</div>
+            </div>
+            <div>
+              <img
+                class="card-suit second-card-suit"
+                src="./cards//suits/hearts.png"
+                alt="hearts suit"
+              />
+            </div>
+            <div class="number-botton first-card-number-top">
+              <div>5</div>
+            </div>
+          </div>
+          <div class="deck-two-container">
+            <div class="card-line"></div>
+          </div>
         </div>
-      </div>
-
-
-      <div class="card-two-container">
-        <div class="number-top second-card-number-top">
-          <div>5</div>
-        </div>
-        <div>
-          <img class="card-suit second-card-suit" src="./cards//suits/hearts.png" alt="hearts suit" />
-        </div>
-        <div class="number-botton">
-          <div>5</div>
-        </div>
-      </div>
-      <div class="deck-two-container">
-        <div class="card-line"></div>
       </div>
     </div>
-
-
-  </div>
-  <div class="footer">
-    &copy Bruno Machado, Guilherme Monteiro, Rui Carvalho and Francisco
-    Carvalhal 2023
-  </div>
-  <script src="./cardWar.js" async defer></script>
-</body>
-
+    <div class="footer">
+      &copy Bruno Machado, Guilherme Monteiro, Rui Carvalho and Francisco
+      Carvalhal 2023
+    </div>
+  </body>
 </html>

@@ -1,24 +1,22 @@
-function splitDeck() {}
+import { createDeck } from './cards/deck.js';
+import { shuffleDeck, splitDeck } from './cards/shuffle.js';
+import { loader } from './loader/loader.js';
 
-const loadText = document.querySelector(".loading-text");
-const board = document.querySelector(".board");
-
-let load = 0;
-
-let int = setInterval(blurring, 10);
-
-function blurring() {
-  load++;
-
-  if (load > 99) {
-    clearInterval(int);
-  }
-
-  loadText.innerText = `${load}%`;
-  loadText.style.opacity = scale(load, 0, 100, 1, 0);
-  board.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
-}
-
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+window.onload = () => {
+  loader();
 };
+
+const handleStartGameClick = () => {
+  const deck = createDeck();
+  const initialDeck = shuffleDeck(deck);
+  const gameDeck = splitDeck(initialDeck);
+  const cardNumbers = document.querySelectorAll('.card-number');
+  cardNumbers.forEach((cardNumber) => {
+    cardNumber.innerText = gameDeck.deckOne[0].displayedValue;
+  });
+
+  const cardSuits = document.getElementById('activeCardOneSuit');
+  cardSuits.src = `./cards/suits/${gameDeck.deckOne[0].suit}.png`;
+};
+
+window.handleStartGameClick = handleStartGameClick;
