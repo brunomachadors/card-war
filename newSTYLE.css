@@ -29,12 +29,12 @@ body {
 
 [data-suit="hearts"].card,
 [data-suit="diamonds"].card {
-  backgroiund-color: red;
+  background-color: red;
 }
 
 [data-suit="spades"].card,
 [data-suit="clubs"].card {
-  backgroiund-color: black;
+  background-color: black;
 }
 
 .pip {
