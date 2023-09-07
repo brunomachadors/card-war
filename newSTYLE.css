@@ -4,89 +4,11 @@
   box-sizing: border-box;
 }
 
-html {
-  background: url("https://media.istockphoto.com/id/467583755/photo/green-poker-table-felt-background.jpg?s=612x612&w=0&k=20&c=fjvSNMeF-fMGBncW5iDTQye8U14Thzp_bIodAzDjf88=");
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-size: 100%;
-  background-position: center;
-  z-index: -1;
-}
-
 body {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-h1 {
   background-color: #ddd;
-  border-radius: 45%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 30px;
-  text-shadow: 6px 12px 2px rgba(0, 0, 0, 0.21);
-}
-
-.scores {
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 50%;
-  margin: 0 60px;
-}
-.player,
-.cpu {
-  background-color: #ddd;
-  border-radius: 15px;
-  padding: 5px;
-}
-
-.board {
-  background-color: white;
-  filter: blur(30px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 70%;
-  width: 90%;
-  border: solid black;
   flex-wrap: wrap;
-  margin: 10px;
-  padding: 5px;
-}
-
-.loading-text {
-  position: absolute;
-  font-size: 50px;
-  color: #000;
-  z-index: 2;
-}
-
-.game-container {
-  background-color: #ddd;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 90%;
-  width: 95%;
-  border: solid black;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.playerOne,
-.playerTwo {
-  display: flex;
-  flex-direction: row;
+  gap: 0.5em;
 }
 
 .card {
@@ -96,210 +18,13 @@ h1 {
   height: var(--height);
   background-color: white;
   border: 1px solid black;
-  border-radius: 0.75em;
-  padding: 0.5em;
+  border-radius: 0.25em;
+  padding: 1em;
   display: grid;
-  align-items: center;
-  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  align-items: center;
   position: relative;
-}
-
-.deck-one-container {
-  border: solid black;
-  --width: 5em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background-color: rgb(167, 66, 66);
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  margin: 0 10px 0 0;
-}
-
-.deck-two-container {
-  border: solid black;
-  --width: 5em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background-color: rgb(167, 66, 66);
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  margin: 0 0 0 10px;
-}
-
-.card-line {
-  width: 90%;
-  height: 92%;
-  border: solid white;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 20px 0;
-}
-
-.button-next-round {
-  height: 60px;
-  width: 100px;
-  display: inline-block;
-  font-size: 20px;
-  background-color: #3f9c11;
-  color: #fff;
-  border: 2px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.button-next-round:hover {
-  background-color: #4fdd20;
-  color: #000;
-}
-
-.button-next-round:focus {
-  outline: none;
-}
-
-.button-start {
-  height: 60px;
-  width: 100px;
-  display: inline-block;
-  font-size: 20px;
-  background-color: #102ea6;
-  color: #fff;
-  border: 2px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.button-start:hover {
-  background-color: #1b7ce3;
-  color: #000;
-}
-
-.button-start:focus {
-  outline: none;
-}
-
-.button-reset {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #8d1717;
-  color: #fff;
-  border: 2px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.button-reset:hover {
-  background-color: #ff0202;
-  color: #000;
-}
-
-.button-reset:focus {
-  outline: none;
-}
-
-@media screen and (max-width: 1200px) {
-}
-
-@media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
-  .button-next-round {
-    height: 60px;
-    width: 80px;
-  }
-
-  .game-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .deck-one-container {
-    height: 70px;
-    width: 40px;
-  }
-
-  .deck-two-container {
-    height: 70px;
-    width: 40px;
-  }
-
-  .button-next-round {
-    height: 30px;
-    width: 50px;
-    font-size: 12px;
-    flex-direction: column;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .button-reset {
-    height: 35px;
-    width: 60px;
-    font-size: 12px;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .game-container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    flex-wrap: nowrap;
-  }
-}
-
-.footer {
-  color: white;
-  text-shadow:
-    -2px 0 black,
-    0 2px black,
-    2px 0 black,
-    0 -2px black;
-}
-
-.pip {
-  grid-row: span 2;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 [data-suit="hearts"].card,
@@ -310,6 +35,15 @@ h1 {
 [data-suit="spades"].card,
 [data-suit="clubs"].card {
   backgroiund-color: black;
+}
+
+.pip {
+  grid-row-end: span 2;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 [data-suit="hearts"] .pip {

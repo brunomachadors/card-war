@@ -19,7 +19,7 @@ _The winner takes all cards on the table._
 - [x] Create "Play/Card-play" button and "Reset";
 - [x] Diferent media query for responsive web app
 - [x] Create shuffle method;
-- [ ] Draft css card and table styling;
+- [x] Draft css card and table styling;
 - [ ] Create card comparison values to determine who wins the round/game;
 - [ ] Implement same value method;
 - [ ] Declare the winner;
