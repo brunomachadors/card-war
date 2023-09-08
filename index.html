@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Card War Game</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./cards/cards.css" />
+    <script type="module" src="./cardWar.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Card War Game</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./cards/cards.css">
-  <script type="module" src="./cardWar.js"></script>
-
-</head>
-
-<body>
-  <h1>Card War Game</h1>
-  <div class="scores">
-    <div class="scores player">Player Score: 0</div>
-    <div class="scores cpu">CPU Score: 0</div>
-  </div>
-  <div class="loading-text">0</div>
-  <div class="board">
-    <div class="game-container">
-      <div class="playerOne">
-        <div class="deck-one-container">
-          <div class="card-line"></div>
-        </div>
-        <div></div>
+  <body>
+    <h1>Card War Game</h1>
+    <div class="scores">
+      <div class="scores player">
+        Player Deck:
+        <div id="playerDeck">26</div>
       </div>
-      <div class="buttons">
-        <div class="spacer">
-          <button class="button-start" id="start" onclick="handleStartGameClick();">
-            START
-          </button>
-        </div>
-        <div>
-          <button class="button-next-round">NEXT</button></div>
-        <div>
-          <button class="button-reset">RESET</button>
-        </div>
+      <div class="scores cpu">
+        CPU Deck:
+        <div id="cpuDeck">26</div>
       </div>
-
-      <div class="playerTwo">
-        <div class="card-two-container card" data-suit="hearts" data-value="2">
+    </div>
+    <div class="loading-text">0</div>
+    <div class="board">
+      <div class="game-container">
+        <div class="playerOne">
+          <div class="deck-one-container">
+            <div class="card-line"></div>
+          </div>
+          <div></div>
         </div>
-        <div class="deck-two-container">
-          <div class="card-line"></div>
+        <div class="buttons">
+          <div class="spacer">
+            <button
+              class="button-start"
+              id="start"
+              onclick="handleStartGameClick();"
+            >
+              START
+            </button>
+          </div>
+          <div>
+            <button class="button-next-round" onclick="handleNextCard();">
+              NEXT
+            </button>
+          </div>
+          <div>
+            <button class="button-reset">RESET</button>
+          </div>
+        </div>
+
+        <div class="playerTwo">
+          <div class="deck-two-container">
+            <div class="card-line"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -54,7 +64,5 @@
       &copy Bruno Machado, Guilherme Monteiro, Rui Carvalho and Francisco
       Carvalhal 2023
     </div>
-
-</body>
-
+  </body>
 </html>

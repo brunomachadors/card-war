@@ -20,6 +20,6 @@ _The winner takes all cards on the table._
 - [x] Diferent media query for responsive web app
 - [x] Create shuffle method;
 - [x] Draft css card and table styling;
-- [ ] Create card comparison values to determine who wins the round/game;
+- [x] Create card comparison values to determine who wins the round/game;
 - [ ] Implement same value method;
 - [ ] Declare the winner;
