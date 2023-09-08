@@ -10,27 +10,30 @@ window.onload = () => {
 const deck = createDeck();
 const initialDeck = shuffleDeck(deck);
 const gameDeck = splitDeck(initialDeck);
-let lastResult = 'Empty';
+let lastWinner = 'Empty';
+let bet = 1;
 
 const handleStartGameClick = () => {
-  drawTopCards(gameDeck.deckOne[0], gameDeck.deckTwo[0]);
+  drawTopCards(gameDeck.deckOne[0], gameDeck.deckTwo[0], bet);
 };
 
 const handleNextCard = () => {
-  console.log(lastResult);
-  if (lastResult === 'draw') {
-    declareWinner(gameDeck.deckOne[4], gameDeck.deckTwo[4], 5);
+  console.log(lastWinner);
+  if (lastWinner === 'draw') {
+    bet = 5;
+    declareWinner(gameDeck.deckOne[4], gameDeck.deckTwo[4], bet);
   } else {
-    declareWinner(gameDeck.deckOne[0], gameDeck.deckTwo[0], 1);
+    bet = 1;
+    declareWinner(gameDeck.deckOne[0], gameDeck.deckTwo[0], bet);
   }
 };
 
 function declareWinner(playerCard, cpuCard, bet) {
+  removeCards();
   if (playerCard.value === cpuCard.value) {
     console.log('Draw');
-    removeCards();
     drawMultipleCards();
-    lastResult = 'draw';
+    lastWinner = 'draw';
   } else if (playerCard.value > cpuCard.value) {
     console.log('Player one won');
     const cardsWon = gameDeck.deckOne.splice(0, bet);
@@ -45,9 +48,9 @@ function declareWinner(playerCard, cpuCard, bet) {
       console.log(card);
       gameDeck.deckOne.push(card);
     });
-    removeCards();
+
     drawTopCards(playerCard, cpuCard);
-    lastResult = 'player';
+    lastWinner = 'player';
   } else if (playerCard.value < cpuCard.value) {
     console.log('Player two won');
     const cardsWon = gameDeck.deckTwo.splice(0, bet);
@@ -62,10 +65,8 @@ function declareWinner(playerCard, cpuCard, bet) {
       console.log(card);
       gameDeck.deckTwo.push(card);
     });
-
-    removeCards();
     drawTopCards(playerCard, cpuCard);
-    lastResult = 'cpu';
+    lastWinner = 'cpu';
   }
   updateScore();
 }
