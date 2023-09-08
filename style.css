@@ -83,6 +83,7 @@ h1 {
   flex-wrap: wrap;
 }
 
+.deck,
 .playerOne,
 .playerTwo {
   display: flex;
