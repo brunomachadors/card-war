@@ -35,7 +35,7 @@ function declareWinner(playerCard, cpuCard, bet) {
     drawMultipleCards();
     lastWinner = 'draw';
   } else if (playerCard.value > cpuCard.value) {
-    console.log('Player one won');
+    console.log('Player won');
     const cardsWon = gameDeck.deckOne.splice(0, bet);
     const cardsLost = gameDeck.deckTwo.splice(0, bet);
     console.log(cardsWon);
@@ -52,7 +52,7 @@ function declareWinner(playerCard, cpuCard, bet) {
     drawTopCards(playerCard, cpuCard);
     lastWinner = 'player';
   } else if (playerCard.value < cpuCard.value) {
-    console.log('Player two won');
+    console.log('CPU won');
     const cardsWon = gameDeck.deckTwo.splice(0, bet);
     const cardsLost = gameDeck.deckOne.splice(0, bet);
     console.log(cardsWon);
