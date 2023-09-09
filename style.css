@@ -19,20 +19,20 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 h1 {
   background-color: #ddd;
-  border-radius: 45%;
+  border-radius: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 30px;
+  padding: 15px;
   color: white;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: solid 2px white;
   background: radial-gradient(
       ellipse farthest-corner at right bottom,
       #fedb37 0%,
@@ -51,31 +51,18 @@ h1 {
     );
 }
 
-.scores {
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 50%;
-  margin: 0 60px;
-}
 .player,
 .cpu {
   background-color: #ddd;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 5px;
 }
 
 .board {
-  background-color: white;
   filter: blur(30px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 70%;
-  width: 90%;
-  border: solid black;
+  height: 75%;
+  width: 100%;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 10px;
   padding: 5px;
@@ -84,70 +71,70 @@ h1 {
 .loading-text {
   position: absolute;
   font-size: 50px;
-  color: #000;
+  color: white;
   z-index: 2;
 }
 
 .game-container {
-  background-color: #ddd;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
   height: 90%;
   width: 95%;
-  border: solid black;
-  margin: auto;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.deck,
 .playerOne,
 .playerTwo {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.playerTwo {
+  flex-direction: row-reverse;
+}
+
+.name {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 5px;
+  font-size: 25px;
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid white;
+  padding: 10px;
+  width: auto;
 }
 
 .card {
-  --width: 5em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 0.75em;
-  padding: 0.5em;
-  display: grid;
+  border: solid white;
+  padding: 15px;
+}
+
+#playerDeck,
+#cpuDeck {
+  color: white;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 5px;
-  justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  position: relative;
+  width: 100%;
+  font-size: 30px;
+  font: bold;
 }
 
 .deck-one-container {
-  border: solid black;
-  --width: 5em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  display: flex;
-  justify-content: space-cente;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background-color: rgb(167, 66, 66);
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  margin: 0 10px 0 0;
-}
-
-.deck-two-container {
-  border: solid black;
-  --width: 5em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
+  height: 180px;
+  width: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,10 +143,24 @@ h1 {
   background-color: rgb(167, 66, 66);
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  margin: 0 0 0 10px;
+}
+
+.deck-two-container {
+  height: 180px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgb(167, 66, 66);
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .card-line {
+  display: flex;
+  border-radius: 4px;
   width: 90%;
   height: 92%;
   border: solid white;
@@ -169,9 +170,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .button-next-round {
@@ -243,15 +244,36 @@ h1 {
 }
 
 @media screen and (max-width: 1200px) {
-}
+  .game-container {
+    height: 100%;
+  }
 
-@media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
   .button-next-round {
-    height: 60px;
-    width: 80px;
+    padding: 0;
+  }
+
+  .playerOne {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .playerTwo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .deck-one-container {
+    height: 180px;
+    width: 120px;
+  }
+
+  .deck-two-container {
+    height: 180px;
+    width: 120px;
   }
 
   .game-container {
@@ -262,39 +284,34 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .game-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .deck-one-container {
-    height: 70px;
-    width: 40px;
+    height: 80px;
+    width: 60px;
   }
 
   .deck-two-container {
-    height: 70px;
-    width: 40px;
-  }
-
-  .button-next-round {
-    height: 30px;
-    width: 50px;
-    font-size: 12px;
-    flex-direction: column;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .button-reset {
-    height: 35px;
+    height: 80px;
     width: 60px;
-    font-size: 12px;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
   }
-
   .game-container {
     flex-direction: row;
     justify-content: center;
@@ -306,4 +323,5 @@ h1 {
 .footer {
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  display: flex;
 }

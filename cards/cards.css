@@ -11,10 +11,8 @@ body {
 }
 
 .card {
-  --width: 5em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
+  height: 180px;
+  width: 120px;
   background-color: white;
   border: 1px solid black;
   border-radius: 0.25em;
@@ -24,6 +22,20 @@ body {
   grid-template-rows: repeat(8, 1fr);
   align-items: center;
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 160px;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    height: 80px;
+    width: 60px;
+  }
 }
 
 [data-suit='hearts'].card,

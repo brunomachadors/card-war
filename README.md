@@ -7,10 +7,6 @@ _The game ends when one of the players have no cards left._
 _If both cards have the same value, it's a draw. In that case eache player draws 3 cards face down and the 4th is played normally._
 _The winner takes all cards on the table._
 
-<p align="center">
-  <img src="https://cdn.shopify.com/s/files/1/1788/4029/files/Picture_1_large.png?v=1568908278" alt="Card War Game">
-</p>
-
 ## Tasks
 
 - [x] Create index.html and the first .css and .js files;
@@ -23,3 +19,10 @@ _The winner takes all cards on the table._
 - [x] Create card comparison values to determine who wins the round/game;
 - [x] Implement same value method;
 - [ ] Declare the winner;
+
+## Game Screenshot
+
+<p align="center">
+  <img src="./image/gameScreenshot.png" alt="Card War Game"  width="75%" height="75%">
+
+</p>

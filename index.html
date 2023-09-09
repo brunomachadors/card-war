@@ -10,63 +10,43 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./cards/cards.css" />
   </head>
-
+  <h1>CARD WAR GAME</h1>
   <body>
-    <h1>CARD WAR GAME</h1>
-    <div class="scores">
-      <div class="scores player">
-        Player Deck:
-        <div id="playerDeck">26</div>
-      </div>
-      <div class="scores cpu">
-        CPU Deck:
-        <div id="cpuDeck">26</div>
-      </div>
-    </div>
     <div class="loading-text">0</div>
     <div class="board">
       <div class="game-container">
         <div class="deck">
+          <div class="name">PLAYER</div>
           <div class="deck-one-container">
-            <div class="card-line"></div>
+            <div class="card-line"><div id="playerDeck">26</div></div>
           </div>
         </div>
-
         <div class="playerOne">
           <div></div>
         </div>
         <div class="buttons">
-          <div class="spacer">
-            <button
-              class="button-start"
-              id="start"
-              onclick="handleStartGameClick();"
-            >
-              START
-            </button>
-          </div>
-          <div>
-            <button class="button-next-round" onclick="handleNextCard();">
-              NEXT
-            </button>
-          </div>
-          <div>
-            <button class="button-reset">RESET</button>
-          </div>
+          <button
+            class="button-start button-next-round"
+            onclick="handleNextCard();"
+          >
+            START
+          </button>
         </div>
 
         <div class="playerTwo"></div>
         <div class="deck">
+          <div class="name">CPU</div>
           <div class="deck-two-container">
-            <div class="card-line"></div>
+            <div class="card-line"><div id="cpuDeck">26</div></div>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="module" src="./cardWar.js"></script>
     <div class="footer">
       &copy Bruno Machado, Guilherme Monteiro, Rui Carvalho and Francisco
       Carvalhal 2023
     </div>
-    <script type="module" src="./cardWar.js"></script>
   </body>
 </html>
