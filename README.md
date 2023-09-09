@@ -21,5 +21,5 @@ _The winner takes all cards on the table._
 - [x] Create shuffle method;
 - [x] Draft css card and table styling;
 - [x] Create card comparison values to determine who wins the round/game;
-- [ ] Implement same value method;
+- [x] Implement same value method;
 - [ ] Declare the winner;

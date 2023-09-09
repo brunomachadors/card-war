@@ -5,7 +5,7 @@
 }
 
 html {
-  background: url('https://media.istockphoto.com/id/467583755/photo/green-poker-table-felt-background.jpg?s=612x612&w=0&k=20&c=fjvSNMeF-fMGBncW5iDTQye8U14Thzp_bIodAzDjf88=');
+  background: url('https://cdn.pixabay.com/photo/2020/07/27/20/44/green-5443435_1280.jpg');
   width: 100%;
   height: 100%;
   display: flex;
@@ -31,14 +31,31 @@ h1 {
   align-items: center;
   margin: 0;
   padding: 30px;
-  text-shadow: 6px 12px 2px rgba(0, 0, 0, 0.21);
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
 }
 
 .scores {
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 50%;
   margin: 0 60px;
 }
@@ -101,6 +118,7 @@ h1 {
   padding: 0.5em;
   display: grid;
   align-items: center;
+  margin: 5px;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -114,7 +132,7 @@ h1 {
   width: var(--width);
   height: var(--height);
   display: flex;
-  justify-content: center;
+  justify-content: space-cente;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
