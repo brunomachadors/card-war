@@ -13,22 +13,33 @@ const gameDeck = splitDeck(initialDeck);
 let lastWinner = 'Empty';
 let bet = 1;
 
-const handleStartGameClick = () => {
-  drawTopCards(gameDeck.deckOne[0], gameDeck.deckTwo[0], bet);
-};
-
 const handleNextCard = () => {
+  changeButton();
   console.log(lastWinner);
+
   if (lastWinner === 'draw') {
-    bet = 5;
-    declareWinner(gameDeck.deckOne[4], gameDeck.deckTwo[4], bet);
+    bet = bet + 4;
   } else {
     bet = 1;
-    declareWinner(gameDeck.deckOne[0], gameDeck.deckTwo[0], bet);
   }
+  const index = bet - 1;
+  console.log('INDEX ' + index);
+  declareCardWinner(gameDeck.deckOne[index], gameDeck.deckTwo[index], bet);
 };
 
-function declareWinner(playerCard, cpuCard, bet) {
+function changeButton() {
+  if (
+    document.getElementsByClassName('button-next-round')[0].innerText !== 'NEXT'
+  ) {
+    document
+      .getElementsByClassName('button-start')[0]
+      .classList.remove('button-start');
+
+    document.getElementsByClassName('button-next-round')[0].innerText = 'NEXT';
+  }
+}
+
+function declareCardWinner(playerCard, cpuCard, bet) {
   removeCards();
   if (playerCard.value === cpuCard.value) {
     console.log('Draw');
@@ -97,28 +108,11 @@ function drawTopCards(playerCard, cpuCard) {
 
 function drawMultipleCards() {
   const playerOne = document.getElementsByClassName('playerOne');
-  let card = drawCard(gameDeck.deckOne[0], 'playerCard0');
-  playerOne[0].appendChild(card);
-  card = drawCard(gameDeck.deckOne[1], 'playerCard1');
-  playerOne[0].appendChild(card);
-  card = drawCard(gameDeck.deckOne[2], 'playerCard2');
-  playerOne[0].appendChild(card);
-  card = drawCard(gameDeck.deckOne[3], 'playerCard3');
-  playerOne[0].appendChild(card);
-  card = drawCard(gameDeck.deckOne[4], 'playerCard4');
-  playerOne[0].appendChild(card);
-
   const playerTwo = document.getElementsByClassName('playerTwo');
-  card = drawCard(gameDeck.deckTwo[0], 'cpuCard0');
-  playerTwo[0].prepend(card);
-  card = drawCard(gameDeck.deckTwo[1], 'cpuCard1');
-  playerTwo[0].prepend(card);
-  card = drawCard(gameDeck.deckTwo[2], 'cpuCard2');
-  playerTwo[0].prepend(card);
-  card = drawCard(gameDeck.deckTwo[3], 'cpuCard3');
-  playerTwo[0].prepend(card);
-  card = drawCard(gameDeck.deckTwo[4], 'cpuCard4');
-  playerTwo[0].prepend(card);
+  for (let i = 0; i < 5; i++) {
+    playerOne[0].appendChild(drawCard(gameDeck.deckOne[i], `playerCard${i}`));
+    playerTwo[0].prepend(drawCard(gameDeck.deckTwo[i], `cpuCard${i}`));
+  }
 }
 
 function drawCard(card, id) {
@@ -137,5 +131,4 @@ function removeAllChilds(parent) {
   }
 }
 
-window.handleStartGameClick = handleStartGameClick;
 window.handleNextCard = handleNextCard;

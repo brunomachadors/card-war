@@ -19,20 +19,20 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 h1 {
   background-color: #ddd;
-  border-radius: 45%;
+  border-radius: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 30px;
+  padding: 15px;
   color: white;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: solid 2px white;
   background: radial-gradient(
       ellipse farthest-corner at right bottom,
       #fedb37 0%,
@@ -67,7 +67,6 @@ h1 {
 }
 
 .board {
-  background-color: white;
   filter: blur(30px);
   display: flex;
   flex-direction: column;
@@ -75,7 +74,6 @@ h1 {
   align-items: center;
   height: 70%;
   width: 90%;
-  border: solid black;
   flex-wrap: wrap;
   margin: 10px;
   padding: 5px;
@@ -89,13 +87,11 @@ h1 {
 }
 
 .game-container {
-  background-color: #ddd;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 90%;
   width: 95%;
-  border: solid black;
   margin: auto;
   flex-wrap: wrap;
 }
@@ -105,6 +101,21 @@ h1 {
 .playerTwo {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  border: solid white;
+  margin: 5px;
+  padding: 15px;
+}
+
+#playerDeck,
+#cpuDeck {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  font: bold;
 }
 
 .card {
@@ -126,7 +137,6 @@ h1 {
 }
 
 .deck-one-container {
-  border: solid black;
   --width: 5em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
@@ -139,11 +149,9 @@ h1 {
   background-color: rgb(167, 66, 66);
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  margin: 0 10px 0 0;
 }
 
 .deck-two-container {
-  border: solid black;
   --width: 5em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
@@ -156,10 +164,12 @@ h1 {
   background-color: rgb(167, 66, 66);
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  margin: 0 0 0 10px;
 }
 
 .card-line {
+  margin: 4px;
+  display: flex;
+  border-radius: 4px;
   width: 90%;
   height: 92%;
   border: solid white;
@@ -169,7 +179,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   padding: 20px 0;
 }
@@ -306,4 +316,5 @@ h1 {
 .footer {
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  display: flex;
 }
