@@ -23,6 +23,6 @@ _The winner takes all cards on the table._
 ## Game Screenshot
 
 <p align="center">
-  <img src="./image/gameScreenshot.png" alt="Card War Game"  width="50%" height="50%">
+  <img src="./image/gameScreenshot.png" alt="Card War Game"  width="75%" height="75%">
 
 </p>
