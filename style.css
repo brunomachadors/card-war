@@ -133,8 +133,8 @@ h1 {
 }
 
 .deck-one-container {
-  height: 180px;
-  width: 120px;
+  height: 120px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,8 +146,8 @@ h1 {
 }
 
 .deck-two-container {
-  height: 180px;
-  width: 120px;
+  height: 120px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +172,7 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 10px 0;
+  padding: 2px 0;
 }
 
 .button-next-round {
@@ -267,13 +267,13 @@ h1 {
   }
 
   .deck-one-container {
-    height: 180px;
-    width: 120px;
+    height: 120px;
+    width: 80px;
   }
 
   .deck-two-container {
-    height: 180px;
-    width: 120px;
+    height: 120px;
+    width: 80px;
   }
 
   .game-container {

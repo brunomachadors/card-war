@@ -11,12 +11,12 @@ body {
 }
 
 .card {
-  height: 180px;
-  width: 120px;
+  height: 120px;
+  width: 80px;
   background-color: white;
   border: 1px solid black;
   border-radius: 0.25em;
-  padding: 1em;
+  padding: 1.7em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -26,8 +26,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .card {
-    height: 160px;
-    width: 120px;
+    height: 120px;
+    width: 80px;
   }
 }
 
@@ -80,7 +80,7 @@ body {
   justify-content: center;
   align-items: center;
   letter-spacing: -0.1em;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .corner-number.top {
@@ -97,7 +97,7 @@ body {
 .corner-number::after {
   line-height: 0;
   display: block;
-  width: 0.5em;
+  width: 0.9em;
 }
 
 [data-suit='hearts'] .corner-number::after {
